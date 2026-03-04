@@ -5,6 +5,7 @@ ___
 
 ## ⭐️ Members: (please enter your name here)
 Ivana Bavin-Gomez-San Basilio
+
 Ian Milin
 
 ___
@@ -117,6 +118,7 @@ Here we will enter information regarding prerequisite and step to set the develo
 
 ## ⭐️ Building the project
 Here we will enter information regarding how to build the project for deployment
+
 
 
 
