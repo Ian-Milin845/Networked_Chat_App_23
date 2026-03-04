@@ -42,9 +42,10 @@ ___
 * **Frameworks and Libraries**: 
 	* **ASP.NET Core**: Core business logic and security processor
 	* **SignalR Core**: Manages the live path sending messages to grous in real-time
-
 * **Logging**: 
 	* **Seralog**: Diagnostics library for .NET apps with structured logging
+* **Server**: 
+	* **Kestrel**: Open-source, cross-platform, and high-performance web server designed for ASP.NET Core applications
 	
 ### 🔹 Database Layer: Possible DBs to be developed
 * **NoSQLDatabase**: 
@@ -118,6 +119,7 @@ Here we will enter information regarding prerequisite and step to set the develo
 
 ## ⭐️ Building the project
 Here we will enter information regarding how to build the project for deployment
+
 
 
 
