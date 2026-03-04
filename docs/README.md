@@ -95,7 +95,7 @@ ___
 │   └── next.config.js
 ├── media/                                          ← stores images or other media used for documentation
 └── docs/                                           ← general project docuemntation
-   └── README.md  								    ← general README fiel fr the entire project
+   └── README.md  								    ← general README file for the entire project
 
 ```
 
@@ -118,6 +118,7 @@ Here we will enter information regarding prerequisite and step to set the develo
 
 ## ⭐️ Building the project
 Here we will enter information regarding how to build the project for deployment
+
 
 
 
