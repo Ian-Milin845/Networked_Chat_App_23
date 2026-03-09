@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: network_app_550
-      POSTGRES_DB: NetworkAppDb
+      POSTGRES_DB: ChatAppDb
     ports:
       - "5432:5432" # Mapping computer's port to container's port
     volumes:

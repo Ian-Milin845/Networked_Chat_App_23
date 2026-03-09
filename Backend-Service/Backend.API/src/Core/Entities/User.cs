@@ -10,6 +10,7 @@
 using System;
 using System.Collections.Generic;
 using Backend.API.src.Core.Interface;
+using Backend.API.src.Core.Logging;
 
 namespace Backend.API.src.Core.Entities
 {
@@ -195,10 +196,14 @@ namespace Backend.API.src.Core.Entities
         /// <param name="customText"></param>
         public void UpdatePresence(string newStatus, string? customText = null)
         {
+            string oldStatus = _presenceStatus;
             PresenceStatus = newStatus;
             CustomStatusText = customText;
             // Stamps moment
             LastActive = DateTime.UtcNow;
+
+            // Logging the state change
+            AppLogger.DebugState("UserEntity", $"Status changed for {Username}: {oldStatus} -> {newStatus}");
         
         }
 
@@ -212,6 +217,7 @@ namespace Backend.API.src.Core.Entities
             if (!_friendIds.Contains(newFriendId))
             { 
                 _friendIds.Add(newFriendId);
+                AppLogger.UserAction(Id.ToString(), $"Added friend {newFriendId}");
             }
         }
 
@@ -225,6 +231,7 @@ namespace Backend.API.src.Core.Entities
             if (_friendIds.Contains(friendId))
             {
                 _friendIds.Remove(friendId);
+                AppLogger.UserAction(Id.ToString(), $"Removed friend {friendId}");
             }
         }
 
@@ -238,6 +245,7 @@ namespace Backend.API.src.Core.Entities
             if (!_joinedServerIds.Contains(serverId))
             {
                 _joinedServerIds.Add(serverId);
+                AppLogger.UserAction(Id.ToString(), $"Joined server {serverId}");
             }
         }
 
@@ -252,6 +260,7 @@ namespace Backend.API.src.Core.Entities
             if (_joinedServerIds.Contains(serverId))
             {
                 _joinedServerIds.Remove(serverId);
+                AppLogger.UserAction(Id.ToString(), $"Leaved server {serverId}");
             }
         }
 
@@ -262,16 +271,9 @@ namespace Backend.API.src.Core.Entities
         public void MarkAsActive()
         {
             LastActive = DateTime.UtcNow;
+            AppLogger.UserAction(Id.ToString(), $"Last time user was active {LastActive}");
 
         }
-
-
-
-
-
-
-
-
 
 
     }

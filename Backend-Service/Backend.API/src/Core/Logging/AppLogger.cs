@@ -1,6 +1,16 @@
+// --------------------------------------------
+//  Project: Network Chat App
+//  Engineer: Ivana Bavin-Gomez-San Basilio
+//  Date: March 7th 2026
+//  Description: Logging file
+//               Implementing Serilog
+// --------------------------------------------
+
+
+
 using Serilog;
 
-namespace Backend.Core.Logging;
+namespace Backend.API.src.Core.Logging;
 
 /// <summary>
 /// ✨ The Lighthouse: Our central logging station 
