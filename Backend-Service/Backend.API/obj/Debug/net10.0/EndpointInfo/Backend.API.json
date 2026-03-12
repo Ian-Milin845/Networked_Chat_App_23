@@ -24,6 +24,18 @@
           }
         }
       }
+    },
+    "/api/Test/all-users": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "tags": [

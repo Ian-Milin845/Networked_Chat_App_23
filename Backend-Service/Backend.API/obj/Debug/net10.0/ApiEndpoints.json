@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "Backend.API.Controllers.TestController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Test/all-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.API.Controllers.TestController",
     "Method": "SeedUser",
     "RelativePath": "api/Test/seed-user",
     "HttpMethod": "POST",

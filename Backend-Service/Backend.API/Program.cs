@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Backend.API.src.Infrastructure.Persistence;
 using Backend.API.src.Core.Interface;
 using Backend.API.src.Infrastructure.Persistence.Repositories;
-
+using Backend.API.Hubs;
 
 namespace Backend.API
 {
@@ -25,6 +25,7 @@ namespace Backend.API
 
             // Add services to the container.
             builder.Services.AddControllers();
+            builder.Services.AddSignalR();
 
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             // Prepares the map
@@ -45,6 +46,8 @@ namespace Backend.API
 
             app.UseAuthorization();
 
+            // Added route to connect to a hub
+            app.MapHub<ChatHub>("/chathub");
 
             app.MapControllers();
 
