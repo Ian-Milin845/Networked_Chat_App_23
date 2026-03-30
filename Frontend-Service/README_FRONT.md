@@ -10,8 +10,10 @@ To start the vite server and run the frontend in browser, use:
 ```
 npm run dev:react
 ```
+
 To run the frontend as an electron app window after starting the vite server, use:
 ```
+npm run build
 npm run dev:electron
 ```
 To package the electron app, use one of these depending on your operating system:
